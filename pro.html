@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitHub - Transform Your Body & Mind</title>
+  <link rel="stylesheet" href="pro.css" />
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <!--<div class="logo">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=facearea&w=96&h=96" alt="FitHub"/>-->
+      <i class="fa-solid fa-dumbbell"></i>
+        <span class="name">FitHub</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#workouts">Workouts</a></li>
+        <li><a href="#mental">Mental Fitness</a></li>
+        <li><a href="#nutrition">Nutrition</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Body & Mind</h1>
+      <p>Your journey to holistic fitness starts here.</p>
+      <button onclick="scrollToSection('workouts')">Get Started</button>
+    </div>
+  </section>
+
+  <section id="workouts" class="section">
+    <h2>Physical Fitness Workouts</h2>
+    <input id="workoutSearch" placeholder="Search workouts..." oninput="filterWorkouts()" />
+    <div class="cards" id="workoutCards">
+      <div class="card" data-title="Full Body Workout">
+        <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&w=400" alt="Full Body Workout"/>
+        <h3>Full Body Workout</h3>
+        <p>A balanced routine for all major muscle groups.</p>
+      </div>
+      <div class="card" data-title="Yoga Flow">
+        <img src="https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg?auto=compress&w=400" alt="Yoga Flow"/>
+        <h3>Yoga Flow</h3>
+        <p>Improve flexibility and balance with guided yoga.</p>
+      </div>
+      <div class="card" data-title="HIIT Cardio">
+        <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&w=400" alt="HIIT Cardio"/>
+        <h3>HIIT Cardio</h3>
+        <p>High-intensity interval training for fat loss.</p>
+      </div>
+      <div class="card" data-title="Strength Training">
+        <img src="https://images.pexels.com/photos/2261482/pexels-photo-2261482.jpeg?auto=compress&w=400" alt="Strength Training"/>
+        <h3>Strength Training</h3>
+        <p>Build muscle and increase strength safely.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mental" class="section">
+    <h2>Mental Fitness & Meditation</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&w=400" alt="Meditation"/>
+        <h3>Guided Meditation</h3>
+        <p>Relax and focus your mind with our 5-minute meditation.</p>
+        <button onclick="startMeditation()">Start 5-min Meditation</button>
+        <div id="meditation-timer" class="timer"></div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg?auto=compress&w=400" alt="Breathing Exercise"/>
+        <h3>Breathing Exercise</h3>
+        <p>Try our 1-minute deep breathing for instant calm.</p>
+        <button onclick="startBreathing()">Start Breathing</button>
+        <div id="breathing-timer" class="timer"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nutrition" class="section">
+    <h2>Nutrition & Healthy Recipes</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&w=400" alt="Healthy Salad"/>
+        <h3>Power Salad</h3>
+        <p>Fresh greens, chickpeas, and quinoa for a protein-packed lunch.</p>
+      </div>
+      <div class="card">
+        <img src="Smoothie-bowl-16df176.jpg" alt="Smoothie Bowl"/>
+        <h3>Smoothie Bowl</h3>
+        <p>Berries, banana, and seeds for a delicious breakfast.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <h2>Latest Blog Posts</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="download.jpg" alt="Blog 1"/>
+        <h3>5 Tips for Staying Motivated</h3>
+        <p>Discover practical ways to keep your fitness journey on track.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="card">
+        <img src="Meditation_101_-_Gaiam.webp
+        " alt="Blog 2"/>
+        <h3>Meditation for Beginners</h3>
+        <p>Learn how to start meditating, even if you’ve never tried before.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact / Join Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="socials">
+      <a href="#" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" /></a>
+      <a href="#" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitHub. All rights reserved.</p>
+  </footer>
+  <script src="pro.js"></script>
+</body>
+</html>
